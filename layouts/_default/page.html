@@ -1,0 +1,32 @@
+<header class="flex-none w-100">
+  {{ if .Params.categories }}
+    {{ range .Params.categories }}
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="f6 fw8 mb0 link mid-gray dim mr3">
+        {{ humanize  . | upper }}
+      </a>
+    {{ end }}
+  {{end}}
+  <h1 class="f1 lh-title fw9 mb3 mv0 pt3 primary-color-dark">
+    {{ .Title }}
+  </h1>
+</header>
+
+<aside class="bt bw2 mt2 mid-gray b--mid-gray fn w-100 measure-wide-l">
+  {{ with .Params.description }}
+    <p class="f3 fw8 lh-title">
+      {{ . | markdownify }}
+    </p>
+  {{ end }}
+
+  <!--
+  NOTE: Removed to test builds without it.
+  partial "components/author-github-data" (dict "context" . "size" "110") -->
+</aside>
+
+{{ with .Params.featured_image_path }}
+  <img src="{{ . }}" alt="Featured Image for {{ $.Title }}" class="mw-100">
+{{ end }}
+
+<div class="measure-wide-l">
+  {{ .Content }}
+</div>

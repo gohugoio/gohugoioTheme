@@ -1,0 +1,36 @@
+<div class="relative {{ .classes }} weight-{{ .context.Weight }}">
+
+  <div class="{{ .context.Site.Data.globals.box_style_classes }}">
+    {{ if eq .context.Section "news" }}
+      <date class="f6 db pt2" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{ .context.Date.Format "January 2, 2006" }}
+      </date>
+    {{ end }}
+
+    <h1 class="f3 near-black">
+      <a href="{{ .context.URL }}" class="link primary-color dim">
+        {{ .context.Title }}
+      </a>
+    </h1>
+
+    <div class="nested-links f5 nested-copy-line-height">
+
+      {{ if .context.Params.description  }}
+        <p>
+          {{ .context.Params.description  }}
+        </p>
+        {{ else }}
+        <p>
+          {{ .context.Summary  }}
+        </p>
+      {{ end }}
+
+        <a href="{{ .context.RelPermalink }}" class="link accent-color hover-black dim f6">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>

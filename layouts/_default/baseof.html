@@ -1,0 +1,35 @@
+<!doctype html>
+<html {{ if isset $.Site.Params "amp" }}amp{{ end }} lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     {{ .Hugo.Generator }}
+
+      {{ if ne (getenv "HUGO_ENV") "production" }}
+          {{- partial "seo" . -}}
+      {{ else }}
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      {{ end }}
+      {{- partial "manifest" . -}}
+
+     <link href='/css/main.min.css?98777' rel='stylesheet' type="text/css" />
+     {{ template "_internal/google_analytics_async.html" . }}
+     <!-- <link href='/css/tachyons-print.min.css' rel='stylesheet' type="text/css" media="print" /> -->
+  </head>
+  <body class="sans-serif bg-primary-color-light{{ if .Site.Params.sidebar_direction }} {{ .Site.Params.sidebar_direction }}{{ end}}">
+    {{ block "nav" . }}{{ partial "site-nav" . }}{{ end }}
+    {{ block "header" . }}{{ end }}
+    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{- partial "site-scripts.html" . -}}{{ end }}
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<header class="bg-primary-color-dark ph4 tc" role="banner">
+
+    <section class="w-100 w-60-l center ph4-l pt5 pb4 pb5-l">
+      {{ partial "svg/hugo-logo-wide.svg" (dict "size" "320") }}
+      {{ with .Site.Params.description }}
+        <h2 class="f3 f1-l fw2 white-90 m0 lh-title pv3 pv0-ns">
+          {{ . }}
+        </h2>
+      {{ end }}
+      <div class="lh-copy f4 w-90-ns center fw2 silver tc tc-ns">
+        {{ .Content }}
+      </div>
+      <div class="w4 mv4 center">
+        <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
+      </div>
+    </section>
+
+</header>

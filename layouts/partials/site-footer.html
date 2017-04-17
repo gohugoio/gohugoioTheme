@@ -1,0 +1,66 @@
+<footer class="fixed relative-l bg-primary-color-dark bottom-0 w-100 pa3 pa4-l" role="contentinfo">
+  <!-- TODO: Make sure we don't lose all the footer content on mobile -->
+  <!-- TODO: Add icons https://github.com/rdwatters/hugo-docs-concept/issues/3#issuecomment-287194777
+-->
+    <div class="dn db-l flex-ns flex-wrap w-80 center mw9 justify-between">
+      <div class="w-third pv3 dn db-l">
+         <div class="mb3 gray tc nested-links">
+           By <a href="http://spf13.com" class="link">spf13</a> and <a href="https://github.com/spf13/hugo/contributors" class="link">friends</a><br />
+         </div>
+          <div class="w4 center">
+            {{ partialCached "svg/hugo-logo-wide.svg" (dict "size" "100") }}
+          </div>
+          <p class="f6 gray tc w-70 center">The Hugo Gopher is based on an original work by Renée French.</p>
+      </div>
+
+      <div class="w-third pv3 dn db-l">
+        <ul class="list ma0 pa0 w-50 center">
+          <li><a href="{{ .Site.Params.github_repo }}" class="link white dim pv2 db">File an Issue</a></li>
+          <li><a href="{{ .Site.Params.forum }}" class="link white dim pv2 db">Get Help</a></li>
+          <li><a href="{{ .Site.Params.gitter }}" class="link white dim pv2 db">Discuss the Source Code</a></li>
+        </ul>
+      </div>
+
+      <div class="w-third pv3 dn db-l">
+        <ul class="list ma0 pa0">
+        	<li><a href="https://twitter.com/gohugoio" class="link white dim pv2 db">@GoHugoIO</a></li>
+          <li><a href="https://twitter.com/spf13" class="link white dim pv2 db">@spf13</a></li>
+          <li><a href="https://twitter.com/bepsays" class="link white dim pv2 db">@bepsays</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  <div  class="pb3 dn" id="globalMenu">
+      {{ partial "nav-links-global-mobile.html" . }}
+  </div>
+  <div  class="pb3 dn" id="docsMenu">
+      {{ partial "nav-links-docs-mobile.html" . }}
+  </div>
+
+  <div class="flex dn-l">
+    <a href="javascript:void(0)" id="globalMenuButton" class="flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white hover-bg-primary-color ba b--white-40 w-auto">MENU</a>
+    <a href="javascript:void(0)"  id="docsMenuButton"  class="flex-auto ml2 dib dn-l f6 tc db mt4-ns ph3 pv2 link white hover-bg-primary-color ba b--white-40 w-auto">DOCS</a>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+  document.querySelector('#globalMenuButton').onclick = function (e) {
+    var nav = document.querySelector('#globalMenu');
+    nav.classList.toggle('dn');
+    e.preventDefault();
+  }
+
+  document.querySelector('#docsMenuButton').onclick = function (e) {
+    var nav = document.querySelector('#docsMenu');
+    nav.classList.toggle('dn');
+    e.preventDefault();
+  }
+
+
+</script>

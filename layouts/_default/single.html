@@ -1,0 +1,30 @@
+{{ define "nav-side" }}{{ partial "nav-side.html" . }}{{ end }}
+{{ define "main" }}
+<!-- NOTE: The Default template needs to work for the docs site because there are so many content sections -->
+    {{ $currentPageUrl := .URL }}
+    {{ $globalVariables := .Site.Data.globals }}
+
+  <article class="cf pv3 pv5-ns">
+      <!-- header spans the full width -->
+    <div class="flex-l">
+      <div class="order-2">
+      {{- partial "toc.html" . -}}
+      </div>
+
+      <div class="order-1 pt4 mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote measure-wide-l mt0-ns ">
+        {{ .Render "page" }}
+      </div>
+    </div>
+
+      <div class="gray f6 mv6">
+        Last Update: {{ .Lastmod.Format "January 2, 2006" }} <br>
+        {{ partial "edit-page" . }}
+      </div>
+
+  </article>
+
+  <div class="cf mb6 mb0-ns pa2 pa4-ns bg-light-gray flex-ns justify-center">
+    {{- partial "previous-next-links" . -}}
+  </div>
+
+{{ end }}

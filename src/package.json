@@ -1,0 +1,32 @@
+{
+  "name": "hugo-theme",
+  "version": "1.0.0",
+  "description": "Theme Dev for the New Dynamic",
+  "main": "index.js",
+  "repository": "https://github.com/theNewDynamic/thenewdynamic.com",
+  "author": "budparr",
+  "license": "MIT",
+  "scripts": {
+    "copy:css": "rm -rf 'css/tachyons' && copyfiles -f 'node_modules/tachyons/src/*.css' 'css/tachyons/' && copyfiles -f node_modules/tachyons-print/css/tachyons-print.min.css ./static/css && copyfiles -f 'node_modules/typeface-open-sans/index.css' 'css'",
+    "build:css": "postcss -c 'css/postcss.config.js'",
+    "watch:css": "onchange 'css/*.css' -- npm run build:css",
+    "copy:fonts": "rm -rf 'fonts' && copyfiles -f 'node_modules/typeface-muli/files/*.*' './../static/files' && copyfiles -f node_modules/tachyons-print/css/tachyons-print.min.css ./static/css",
+    "critical:css": "critical public/index.html --base public --minify --css public/assets/css/main.css > src/_includes/global/critical.css",
+    "start": "npm run build:css && npm run watch:css"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "cssnano": "^3.9.1",
+    "docsearch.js": "^2.3.3",
+    "onchange": "^3.2.1",
+    "postcss": "^5.2.8",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.0.0",
+    "tachyons": "^4.6.1",
+    "tachyons-print": "^4.6.2",
+    "typeface-muli": "^0.0.22",
+    "webpack": "2.2.0-rc.3"
+  },
+  "dependencies": {}
+}

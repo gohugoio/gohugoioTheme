@@ -1,0 +1,35 @@
+<section class="flex flex-column sidebar relative bg-primary-colorTK bg-  silver TKwhite shadow-2TK b--light-gray overflow-hidden fixed-l top-0 h-100-l vh-100-l z-5">
+
+  <section role="banner">
+    <a class="db pt2 pt4-l tc center" href="/">
+      <img src="{{ .Site.Params.logo }}" alt="" class="w-25 w-50-l">
+    </a>
+
+    <a class="f4 f3-l fw3 brand-font link primary-color-darkTK white dim db tc ph3 pb4 pb3-l" href="/">
+       {{ .Site.Title | markdownify  }}
+    </a>
+  </section>
+
+  <nav class="f6 mv3-l tracked w-100 overflow-auto dn db-l" role="navigation">
+    {{ partial "nav-links" . }}
+  </nav>
+
+  <div class="flex-auto">
+    <!-- spacer -->
+  </div>
+
+
+
+  <div class="cf w-100 pl4 mb3 center dn db-l">
+    <a href="{{ .Site.Params.twitter }}" class="link dim mr3">
+      {{ partial "svg/twitter.svg" .}}
+    </a>
+    <a href="{{ .Site.Params.facebook }}" class="link dim mr3">
+      {{ partial "svg/facebook.svg" .}}
+    </a>
+    <a href="{{ .Site.Params.instagram }}" class="link dim mr3">
+      {{ partial "svg/instagram.svg" .}}
+    </a>
+  </div>
+
+</section>

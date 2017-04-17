@@ -1,0 +1,61 @@
+pre, .pre  {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow:   scroll;
+}
+
+
+pre  code {
+  display: block;
+  padding: 1.5em 1.5em;
+  white-space: normal;
+  font-size: .875rem;
+  line-height: 2;
+
+}
+
+pre {
+  background-color: #222;
+  color: #ddd;
+  white-space: pre;
+
+  hyphens: none;
+  position: relative;
+}
+@media (--breakpoint-large) {
+.full-width, preTK {
+  /*width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;*/
+  width: 60vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -30vw;
+  margin-right: -30vw;
+}
+}
+
+
+/*
+//
+*/
+
+.code-block .line-numbers-rows {
+    background: #2f3a46;
+    border: none;
+    bottom: -50px;
+    color: #98a4b3;
+    left: -178px;
+    padding: 50px 0;
+    top: -50px;
+    width: 138px
+}
+
+.code-block .line-numbers-rows>span:before {
+    color: inherit;
+    padding-right: 30px
+}
