@@ -1,18 +1,15 @@
-// var postcss = require('postcss')
-
 module.exports = {
-  use: [
-    'postcss-import',
-    'postcss-cssnext',
-    'cssnano'
-  ],
-  input: './css/main.css',
-  output: './../static/css/main.min.css',
-  cssnano: {
-    discardComments: {
-      removeAll: true
-    },
-    minifyFontValues: false,
-    autoprefixer: false
-  }
-}
+  plugins: {
+   'postcss-import': {},
+   'postcss-cssnext': {
+	     browsers: ['last 2 versions', '> 5%'],
+	     },
+    'cssnano': {
+      discardComments: {
+        removeAll: true
+      },
+      minifyFontValues: false,
+      autoprefixer: false
+    }
+	}
+};
