@@ -1,9 +1,7 @@
 {{ $currentPage := . }}
-
 <nav class="z-999 bg-primary-color-dark ph4 border-box pv4 w-100 flex justify-start items-center" role="navigation">
   <h1 class="mv0 lh-solid f3 ml0-ns mr0 mr4-l">
     <a href="{{ .Site.Params.globalHome }}" class="link white">
-       <!-- partial "svg/hugo-logo-wide.svg" (dict "size" "120")  -->
        HUGO
     </a>
   </h1>
@@ -14,7 +12,9 @@
           <!-- TODO: Create an active class to show which site one is currently at -->
         <a href="{{ .URL }}" class="link dim{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
           {{ .Name }}
-          {{ if ge .Post "external" }}
+            {{/* using ".Post" from the menu system to determine if we should show an icon for external links */}}
+          {{ $post_status := printf "%s" .Post }}
+          {{ if eq $post_status "external" }}
             {{ partial "svg/link-ext.svg" (dict "fill" "#999" "size" "10") }}
           {{ end }}
         </a>
@@ -22,7 +22,6 @@
     {{ end }}
   </ul>
   <div class="flex-auto"> </div>
-
     {{- partial "site-search.html" . -}}
   <div class="flex-auto"> </div>
   <span class="absolute flex-m flex-column static-l top-0 right-0">
