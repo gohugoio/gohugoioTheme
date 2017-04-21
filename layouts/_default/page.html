@@ -6,16 +6,16 @@
       </a>
     {{ end }}
   {{end}}
-  <h1 class="f1 lh-title fw9 mb3 mv0 pt3 primary-color-dark">
+  <h1 class="f1 lh-title mb3 mv0 pt3 primary-color-dark">
     {{ .Title }}
   </h1>
 </header>
 
-<aside class="bt bw2 mt2 mid-gray b--mid-gray fn w-100 measure-wide-l">
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   {{ with .Params.description }}
-    <p class="f3 fw8 lh-title">
+    <div class="f3 fw4 lh-title">
       {{ . | markdownify }}
-    </p>
+    </div>
   {{ end }}
 
   <!--
@@ -27,6 +27,6 @@
   <img src="{{ . }}" alt="Featured Image for {{ $.Title }}" class="mw-100">
 {{ end }}
 
-<div class="measure-wide-l">
+<div class="prose measure-wide-l">
   {{ .Content }}
 </div>
