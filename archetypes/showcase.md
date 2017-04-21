@@ -1,8 +1,13 @@
-+++
-title = ""
-categories = ["showcase"]
-date = ""
-description = ""
-featured_image_path = ""
-link_to_site = ""
-+++
+---
+description: ""
+lastmod: ""
+license: ""
+licenseLink: ""
+sitelink: ""
+sourcelink: ""
+categories: [showcase]
+tags: []
+image: ""
+toc: false
+notesforauthors: "Go to gohugo.io/contribute/documentation for more info"
+---
