@@ -7,16 +7,25 @@
     </div>
   </article>
   <div class="mw8 center">
-    <section class="ph4">asdflkj
+    <section class="ph4">
       {{ range $key, $value := .Data.Terms }}
         <h2 class="f1">
           <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}" class="link blue hover-black">
             {{ $.Data.Singular | humanize }}: {{ $key }}
           </a>
         </h2>
-        {{ range $value.Pages }}
-          {{ partial "summary.html" . }}
-        {{ end }}
+        <div class="flex flex-wrap">
+          {{ $globalVariables := .Site.Data.globals }}
+          {{ $section_classes := $globalVariables.section_flex_wrap }}
+          {{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
+          <section class="{{ $section_classes }} w-100">
+            {{ range $value.Pages }}
+              {{ partial "boxes-section-summaries" (dict "context" . "classes" $interior_classes "fullcontent" false) }}
+            {{ end }}
+          </section>
+        </div>
+
+
       {{ end }}
     </section>
   </div>
