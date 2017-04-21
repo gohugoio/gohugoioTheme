@@ -8,13 +8,13 @@
   <ul class="list ma0 pa0 dn dib-l">
     {{ range .Site.Menus.global }}
       <li class="f5 dib mr4" role="menuitem">
-          <!-- TODO: Create an active class to show which site one is currently at -->
+          {{/* TODO: Create an "Global" active class to show which site one is currently at */}}
         <a href="{{ .URL }}" class="link dim{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
           {{ .Name }}
             {{/* using ".Post" from the menu system to determine if we should show an icon for external links */}}
           {{ $post_status := printf "%s" .Post }}
           {{ if eq $post_status "external" }}
-            {{ partial "svg/link-ext.svg" (dict "fill" "#999" "size" "10") }}
+            {{ partial "svg/link-ext.svg" (dict "size" "10") }}
           {{ end }}
         </a>
       </li>

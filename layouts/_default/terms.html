@@ -1,31 +1,23 @@
+{{ define "header" }}{{ partial "page-header" . }}{{ end }}
 {{ define "main" }}
-<main class="main">
-	<div class="content">
-	<header class="content-header">
-			<h1 class="page-title"><i class="icon-{{.Data.Plural}}"></i> {{.Data.Plural}}</h1>
-		</header>
-		<div class="body-copy taxonomies">
-			{{ $data := .Data }}
-			{{ $dataPlural := add (.Title | urlize) "/"}}
-			<table class="terms-table">
-				<thead>
-					<tr>
-						<th>Term</th>
-						<th>Count</th>
-					</tr>
-				</thead>
-			<tbody>
-			{{ range $key, $value := .Data.Terms.Alphabetical }}
-			{{$val := $value.Name | urlize}}
-			{{$valurl := add $dataPlural $val}}
-			<tr>
-				<td><a href="{{ $valurl | relURL}}">{{ replace $value.Name "-" " " }}</a></td>
-				<td>{{ $value.Count }}</td>
-			</tr>
-	    {{ end }}
-	    </tbody>
-	    </table>
-		</div>
-	</div>
-</main>
+    {{ $data := .Data }}
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+  </article>
+  <div class="mw8 center">
+    <section class="ph4">asdflkj
+      {{ range $key, $value := .Data.Terms }}
+        <h2 class="f1">
+          <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}" class="link blue hover-black">
+            {{ $.Data.Singular | humanize }}: {{ $key }}
+          </a>
+        </h2>
+        {{ range $value.Pages }}
+          {{ partial "summary.html" . }}
+        {{ end }}
+      {{ end }}
+    </section>
+  </div>
 {{ end }}
