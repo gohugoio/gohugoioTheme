@@ -4,6 +4,7 @@
 
 
 @media (--breakpoint-large) {
+  .column-count-3-l {column-count: 3}
   .column-count-2-l {column-count: 2}
   .column-gap-1-l {column-gap: 1}
   .break-inside-avoid-l {break-inside: avoid}
