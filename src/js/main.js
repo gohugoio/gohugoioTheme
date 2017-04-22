@@ -8,7 +8,12 @@ docsearch({
   debug: true // Set debug to true if you want to inspect the dropdown
 });
 
-
+var clipboard = require('clipboard/dist/clipboard.js');
+new clipboard('.btn', {
+    target: function(trigger) {
+        return trigger.nextElementSibling;
+    }
+});
 
 
 

@@ -12,6 +12,7 @@
     "start": "npm run build"
   },
   "devDependencies": {
+    "clipboard": "^1.6.1",
     "critical": "^0.8.4",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",

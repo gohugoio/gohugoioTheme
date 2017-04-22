@@ -12,15 +12,18 @@ pre  code {
   font-size: .875rem;
   line-height: 2;
   overflow-x: auto;
+
 }
 
 pre {
-  background-color: #222;
-  color: #ddd;
+  background-color: #f8f8f8;
+  color: #333;
   white-space: pre;
-
   hyphens: none;
   position: relative;
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: solid;
 }
 @media (--breakpoint-large) {
 .full-width, preTK {

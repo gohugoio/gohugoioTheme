@@ -32,9 +32,6 @@
 {{ end }}
 
 <div class="prose measure-wide-l">
-  <div class="bg-red">
-    {{- partial "docs-functions-signature.html" . -}}
-  </div>
-
+  {{- partial "docs-functions-signature.html" . -}}
   {{ .Content }}
 </div>
