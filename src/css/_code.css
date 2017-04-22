@@ -8,10 +8,10 @@ pre, .pre  {
 pre  code {
   display: block;
   padding: 1.5em 1.5em;
-  white-space: normal;
+  /*white-space: normal;*/
   font-size: .875rem;
   line-height: 2;
-
+  overflow-x: auto;
 }
 
 pre {
