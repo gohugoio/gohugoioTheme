@@ -1,0 +1,9 @@
+{{ if isset .Params "signature" -}}
+  {{- with .Params.signature }}
+<pre class="mv4 pa3 bg-white black bl bw3 b--mid-grayf b--blue f4">
+    {{- range . }}
+{{ . }}
+    {{- end }}
+</pre>
+  {{- end -}}
+{{ end }}
