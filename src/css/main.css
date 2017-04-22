@@ -24,3 +24,8 @@
   padding-left: 1em;
   /*margin: 0;*/
 }
+
+
+.mw-90 {
+  max-width:90%;
+}
