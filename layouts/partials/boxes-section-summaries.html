@@ -9,7 +9,11 @@
 
     <h1 class="f3 near-black">
       <a href="{{ .context.URL }}" class="link primary-color dim">
+      {{- if eq .context.Section "functions" -}}
+        {{ .context.LinkTitle }}
+      {{- else -}}
         {{ .context.Title }}
+      {{- end -}}
       </a>
     </h1>
 
