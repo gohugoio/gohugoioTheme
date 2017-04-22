@@ -1,18 +1,18 @@
-<div class="code" id="{{.Get "file" | urlize}}">
+<div class="relative mv4 code" id="{{.Get "file" | urlize}}">
 	{{- with .Get "file" -}}
 		<div class="filename">{{.}}</div>
 	{{- end -}}
 	{{with .Get "download"}}
-	<button class="download-button" title="Download &quot;{{.}}&quot;.">
-		<i class="icon-download"></i><span class="button-text">Download</span>
-	</button>
+		<button class="download-button" title="Download &quot;{{.}}&quot;.">
+			<i class="icon-download"></i><span class="button-text">Download</span>
+		</button>
 	{{end}}
 	{{ if ne (.Get "copy") "false" }}
-	<button class="copy-button" title="Copy this code to your clipboard." data-clipboard-snippet>
-			<i class="icon-clipboard"></i><span class="button-text"> Copy</span>
-	</button>
+		<button class="copy btn absolute-l top-0 right-0 bg-accent-color-dark white tc mt1 ph3 pt2 pb2 f6 bn br2 br--top" title="Copy this code to your clipboard." data-clipboard-action="copy">
+		{{/* copy in css with .copy class */}}
+		</button>
 	{{end}}
-	<div class="code-copy-content" {{with .Get "download"}}id="{{.}}"{{end}}>
-	{{- .Inner -}}
+	<div class="code-copy-content mt0" {{with .Get "download"}}id="{{.}}"{{end}}>
+		{{- .Inner -}}
 	</div>
 </div>

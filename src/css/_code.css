@@ -3,16 +3,12 @@ pre, .pre  {
   overflow-y: hidden;
   overflow:   scroll;
 }
-
-
 pre  code {
   display: block;
   padding: 1.5em 1.5em;
-  /*white-space: normal;*/
   font-size: .875rem;
   line-height: 2;
   overflow-x: auto;
-
 }
 
 pre {
@@ -25,8 +21,16 @@ pre {
   border-color: #ccc;
   border-style: solid;
 }
+/*We are adding the copy button content here so we can change it with javascript. See the "Clipboard scripts"*/
+.copy:after {
+  content: "Copy"
+}
+.copied:after {
+  content: "Copied"
+}
+
 @media (--breakpoint-large) {
-.full-width, preTK {
+  .full-width, preTK {
   /*width: 100vw;
   position: relative;
   left: 50%;
@@ -39,13 +43,8 @@ pre {
   right: 50%;
   margin-left: -30vw;
   margin-right: -30vw;
+  }
 }
-}
-
-
-/*
-//
-*/
 
 .code-block .line-numbers-rows {
     background: #2f3a46;
