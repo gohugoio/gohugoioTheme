@@ -8,7 +8,7 @@ docsearch({
   debug: true // Set debug to true if you want to inspect the dropdown
 });
 
-
+var hljs = require('highlight.js')
 var Clipboard = require('clipboard/dist/clipboard.js');
 new Clipboard('.btn', {
   target: function(trigger) {
@@ -22,12 +22,11 @@ new Clipboard('.btn', {
 });
 
 function successMessage(elem, msg) {
-  elem.setAttribute('class', 'copied bg-primary-color absolute-l top-0 right-0 white tc mt1 ph3 pt2 pb2 f6 bn br2 br--top btn');
+  elem.setAttribute('class', 'copied bg-primary-color absolute top-0 right-0 white tc mt1 ph3 pt2 pb2 f6 bn br2 br--top btn');
   elem.setAttribute('aria-label', msg);
 }
 
 function fallbackMessage(elem, action) {
-  elem.setAttribute('class', 'copied bg-red white tc ph3 pv2 mb0 mt3 f6 bn br2 btn');
   var actionMsg = '';
   var actionKey = (action === 'cut' ? 'X' : 'C');
   if (isMac) {
