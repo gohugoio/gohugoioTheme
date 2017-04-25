@@ -27,18 +27,19 @@
 }
 
 /* Hides non-meaningful TOC items*/
-  #TableOfContents ul li ul li ul li{
+#TableOfContents ul li ul li ul li{
     display: none;
   }
 
 
 #TableOfContents ul li {
-  margin-bottom: .25em;
+  margin-bottom: .5em;
+  line-height: 1.375;
 }
 
 #TableOfContents ul li a{
   width: 100%;
-  padding: .25em .375em;
+  padding: .25em 0;
 
 }
 #TableOfContents ul li a:hover {
