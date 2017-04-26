@@ -33,7 +33,9 @@
 
 
 #TableOfContents ul li {
-  margin-bottom: .5em;
+  color: black;
+  display: inline-block;
+  margin-right: 1em;
   line-height: 1.375;
 }
 

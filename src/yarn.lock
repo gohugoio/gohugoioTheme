@@ -3782,6 +3782,10 @@ sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
 
+scrolldir@^1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/scrolldir/-/scrolldir-1.2.7.tgz#ac722696ec96ba62649d4ff57ebc189efc30205c"
+
 select@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"

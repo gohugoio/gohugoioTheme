@@ -18,7 +18,9 @@
 @import '_hljs';
 @import '_hugo-internal-template-styling';
 @import '_social-icons';
+@import '_stickyheader';
 @import '_svg';
+
 @import '_variables';
 
 .nested-blockquote blockquote {
