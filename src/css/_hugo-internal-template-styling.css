@@ -34,14 +34,16 @@
 
 #TableOfContents ul li {
   color: black;
-  display: inline-block;
+  display: block;
   margin-right: 1em;
+  margin-bottom: .375em;
   line-height: 1.375;
 }
 
 #TableOfContents ul li a{
   width: 100%;
-  padding: .25em 0;
+  padding: .25em .375em;
+  margin-left: -.375em;
 
 }
 #TableOfContents ul li a:hover {

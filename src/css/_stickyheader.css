@@ -1,17 +1,15 @@
 
 @media (min-width: 75em) {
-  .sticky {
-    position: static;
-  }
+  
   [data-scrolldir="down"] .sticky {
     position: fixed;
-    top:300px;
+    top:100px;
     right:0;
   }
 
   [data-scrolldir="up"] .sticky {
     position: fixed;
-    top:300px;
+    top:100px;
     right:0;
   }
 }
