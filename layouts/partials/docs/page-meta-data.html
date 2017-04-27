@@ -1,16 +1,3 @@
 <h6 class="f5 mb2">
   <a href="{{ .Permalink }}">“{{ .Title }}”</a> was last updated: {{ .Lastmod.Format "January 2, 2006" }}
 </h6>
-<p>
-  {{ if .IsPage }}
-    {{ with .GitInfo }}Commit:
-      <a href="https://github.com/spf13/hugo/commit/{{ .Hash }}">
-        {{ .Subject }} ({{ .AbbreviatedHash }})
-      </a>
-    {{end }}
-  {{ end }}
-
-  <br />
-
-  Release: Hugo v{{ .Site.Params.release }} documentation
-</p>
