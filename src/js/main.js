@@ -1,12 +1,10 @@
 import styles from './../css/main.css';
 import './docsearch.js'
-import './hljs.js'
+// import './hljs.js'
 import './clipboardjs.js'
 import './smoothscroll.js'
-
-
 var scrollDir = require('scrolldir/dist/scrolldir.auto.min.js');
-
+import './nojs.js'
 
 
 

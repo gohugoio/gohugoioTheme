@@ -17,6 +17,7 @@
 @import '_font-family';
 @import '_hljs';
 @import '_hugo-internal-template-styling';
+@import '_no-js';
 @import '_social-icons';
 @import '_stickyheader';
 @import '_svg';
