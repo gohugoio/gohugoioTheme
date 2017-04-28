@@ -13,6 +13,8 @@
 @import '_code';
 @import '_color-scheme';
 @import '_columns';
+@import '_content';
+@import '_content-tables';
 @import '_definition-lists';
 @import '_font-family';
 @import '_hljs';
@@ -20,7 +22,7 @@
 @import '_no-js';
 @import '_social-icons';
 @import '_stickyheader';
-@import '_tables';
+
 @import '_svg';
 
 @import '_variables';

@@ -1,0 +1,13 @@
+.prose ul, .prose ol {
+  margin-bottom: 2em;
+}
+.prose ul li, .prose  ol li {
+  margin-bottom: .5em;
+}
+.prose li:hover {
+  background-color: var(--light-gray)
+}
+.prose ::selection {
+  background: var(--accent-color-dark); /* WebKit/Blink Browsers */
+  color: white;
+}
