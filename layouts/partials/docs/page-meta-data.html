@@ -1,3 +1,6 @@
-<h6 class="f5 mb2">
-  <a href="{{ .Permalink }}">“{{ .Title }}”</a> was last updated: {{ .Lastmod.Format "January 2, 2006" }}
+<h6 class="f4 dark-gray mb2">
+  <a href="{{ .Permalink }}" class="hide-child link accent-color-dark">
+  <span class="nl3 child">{{ partial "svg/link-permalink.svg" (dict "size" "14px") }}</span>
+    “{{ .Title }}”
+  </a> was last updated: {{ .Lastmod.Format "January 2, 2006" }}
 </h6>
