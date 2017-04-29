@@ -1,14 +1,12 @@
 import styles from './../css/main.css';
 import './clipboardjs.js'
+import './codeblocks.js'
 import './docsearch.js'
 import './hljs.js'
 import './scrolldir.js'
 import './smoothscroll.js'
 
 import './nojs.js'
-
-
-
 
 
 
