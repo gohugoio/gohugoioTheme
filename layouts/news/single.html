@@ -13,8 +13,10 @@
         {{ end }}
       {{end}}
 
-      <h1 class="f1 lh-title fw9 mb3 mv0 pt3 primary-color">
-        {{ .Title }}
+      <h1 class="f1 lh-title fw9 mb3 mv0 pt3">
+        <a href="{{ .URL }}" class="link primary-color dim">
+          {{ .Title }}
+        </a>
       </h1>
     </header>
 
