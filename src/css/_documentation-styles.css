@@ -45,6 +45,11 @@
     margin-top: 3em;
     font-size: 1.875em;
     border-bottom: 3px solid #ccc;
+    &.minor {
+      font-size: inherit;
+      margin-top: inherit;
+      border-bottom: none;
+    }
   }
 
   .documentation-copy h3 {
