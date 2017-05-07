@@ -38,7 +38,7 @@
 
 /* hljs-template-variable covers the handlebars templating*/
 .hljs-template-variable {
-  color: var(--accent-color-dark);
+  color: var(--primary-color);
 }
 
 .hljs-deletion,

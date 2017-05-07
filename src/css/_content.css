@@ -8,6 +8,6 @@
   background-color: var(--light-gray)
 }
 .prose ::selection {
-  background: var(--accent-color-dark); /* WebKit/Blink Browsers */
+  background: var(--primary-color); /* WebKit/Blink Browsers */
   color: white;
 }

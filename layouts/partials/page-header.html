@@ -11,7 +11,7 @@
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
         {{ $link :=  $name | printf "%s%s" "/categories/" | printf "%s/" }}
         <li class="f5 dib mr3 v-top mr3 mb3 mb0-ns">
-          <a href="{{ $link }}" class="link {{ if eq $currentURL $link }} bg-primary-color-dark {{ else }} bg-primary-color {{ end }} white ph3 pv1 br2 hover-bg-accent-color-light">
+          <a href="{{ $link }}" class="link {{ if eq $currentURL $link }} bg-primary-color-dark {{ else }} bg-primary-color-dark {{ end }} white ph3 pv1 br2 hover-bg-accent-color-light">
             {{ $name  | humanize }}
           </a>
         </li>

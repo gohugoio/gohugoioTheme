@@ -32,20 +32,20 @@
 
 
 
-  <div  class="pb3  dn js-some-content1" id="globalMenu">
+  <div  class="pb3 dn globalmenu">
       {{ partial "nav-links-global-mobile.html" . }}
   </div>
-  <div  class="pb3 dn js-some-content2" id="docsMenu">
+  <div  class="pb3 dn docsmenu">
       {{ partial "nav-links-docs-mobile.html" . }}
   </div>
 
   <div class="flex dn-l">
 
-    <button class="js-toggle-change flex-auto ml2 dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".js-some-content1">Menu</button>
+    <button class="js-toggle flex-auto ml2 dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
 
-    <button class="js-toggle-change flex-auto ml2 dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".js-some-content2">Docs Menu</button>
+    <button class="js-toggle-change flex-auto ml2 dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
 
-  
+
   </div>
 </footer>
 
@@ -54,21 +54,33 @@
 
 
 <script>
-
-var toggleBtns = document.getElementsByClassName('js-toggle-change');
+// Grab any element that has the 'js-toggle' class and add an event listner for the toggleClass function
+var toggleBtns = document.getElementsByClassName('js-toggle');
   for (var i = 0; i < toggleBtns.length; i++) {
     toggleBtns[i].addEventListener('click', toggleClass, false);
+
   }
+
+
 function toggleClass() {
+  // Define the data target via the dataset "target" (e.g. data-target=".docsmenu")
   var content = this.dataset.target.split(' ');
+  // Loop through the targets' divs
   for (var i = 0; i < content.length; i++) {
     var matches = document.querySelectorAll(content[i]);
+
+    //for each, if the div has the 'dn' class (which is "display:none;"), remove it, otherwise, add that class
     [].forEach.call(matches, function(dom) {
       dom.classList.contains('dn') ?
       dom.classList.remove('dn') :
       dom.classList.add('dn');
+       return false;
     });
   }
 }
+// what we need to do is when one button is clicked, first hide any menu that is showing already. So, for example, there are two menus, when menu 1 is clicked, it will display a menu. If menu 2 is clicked, menu 1 should go away, and menu 2 should display.
+
+//This should work on any number of buttons.
+// I think stopPropagation() may be the answer, but it's not clicking for me.
 
 </script>
