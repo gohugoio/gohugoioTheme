@@ -1,7 +1,0 @@
-{{ if isset .Params "signature" -}}
-  {{- with .Params.signature }}
-    <pre class="f4 mv4 ph3 pt3 bg-light-gray" style="border-left:4px solid #0594CB;">
-      {{- range . }}{{ . }}{{- end }}
-    </pre>
-  {{- end -}}
-{{ end }}
