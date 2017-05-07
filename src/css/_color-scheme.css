@@ -32,7 +32,7 @@
 
 
 .nested-links a {
-  color: var(--accent-color-dark);
+  color: var(--primary-color);
   text-decoration: none;
 
 }
