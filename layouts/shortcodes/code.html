@@ -1,18 +1,15 @@
-<div class="relative code" id="{{.Get "file" | urlize}}">
+<div class="code relative bg-primary-color moon-gray" id="{{.Get "file" | urlize}}">
 	{{- with .Get "file" -}}
-		<div class="filename">{{.}}</div>
+		<div class="filename san-serif f6 dib lh-solid pl2 pv2">{{.}}</div>
 	{{- end -}}
-	{{with .Get "download"}}
-		<button class="download-button" title="Download &quot;{{.}}&quot;.">
-			<i class="icon-download"></i><span class="button-text">Download</span>
-		</button>
-	{{end}}
+
 	{{ if ne (.Get "copy") "false" }}
-		<button class="copy btn absolute top-0 right-0 bg-primary-color white tc mt1 ph3 pt2 pb2 f6 bn br2 br--top" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		{{/* copy in css with .copy class */}}
+		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
 		</button>
+		{{/* Functionality located within filesaver.js The copy here is located in the css with .copy class so it can be replaced with JS on success */}}
 	{{end}}
-	<div class="code-copy-content mt0" {{with .Get "download"}}id="{{.}}"{{end}}>
+	<div class="code-copy-content nt3" {{with .Get "download"}}id="{{.}}"{{end}}>
 		{{- .Inner -}}
 	</div>
+
 </div>

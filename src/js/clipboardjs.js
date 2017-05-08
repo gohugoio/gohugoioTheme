@@ -1,5 +1,5 @@
 var Clipboard = require('clipboard/dist/clipboard.js');
-new Clipboard('.btn', {
+new Clipboard('.copy', {
   target: function(trigger) {
     return trigger.nextElementSibling;
   }
@@ -11,7 +11,7 @@ new Clipboard('.btn', {
 });
 
 function successMessage(elem, msg) {
-  elem.setAttribute('class', 'copied bg-primary-color absolute top-0 right-0 white tc mt1 ph3 pt2 pb2 f6 bn br2 br--top btn');
+  elem.setAttribute('class', 'copied bg-primary-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2');
   elem.setAttribute('aria-label', msg);
 }
 
