@@ -24,7 +24,7 @@ section_two_column_classes_interior: "break-inside-avoid-l nested-copy-line-heig
 
 # uses CSS Flex box to wrap even boxes
 section_flex_wrap: "flex-ns flex-wrap justify-between"
-section_flex_wrap_interior: "flex-auto w-100 w-40-l mr3 mb3 bg-white shadow-2TK ba b--moon-gray nested-copy-line-height"
+section_flex_wrap_interior: "flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height"
 
 # universal. Color may be overridden by color in section_flex_wrap_interior
-box_style_classes: "bg-white mb2 ph3 ph4-l pv3 gray"
+box_style_classes: "bg-white mb2 pa3 pa4-l gray"

@@ -2,12 +2,12 @@
 
   <div class="{{ .context.Site.Data.globals.box_style_classes }}">
     {{ if eq .context.Section "news" }}
-      <date class="f6 db pt2" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      <date class="f6 db" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{ .context.Date.Format "January 2, 2006" }}
       </date>
     {{ end }}
 
-    <h1 class="f3 near-black">
+    <h1 class="near-black f3">
       <a href="{{ .context.URL }}" class="link primary-color dim">
       {{- if eq .context.Section "functions" -}}
         {{ .context.LinkTitle }}
@@ -17,19 +17,14 @@
       </a>
     </h1>
 
-    <div class="nested-links f5 nested-copy-line-height">
-
+    <div class="lh-copy links">
       {{ if .context.Params.description  }}
-        <p>
           {{ .context.Params.description  }}
-        </p>
         {{ else }}
-        <p>
           {{ .context.Summary  }}
-        </p>
       {{ end }}
 
-        <a href="{{ .context.RelPermalink }}" class="link accent-color hover-black dim f6">
+        <a href="{{ .context.RelPermalink }}" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
