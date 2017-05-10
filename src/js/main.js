@@ -1,11 +1,13 @@
 import styles from './../css/main.css';
+import './anchorforid.js'
 import './clipboardjs.js'
 import './codeblocks.js'
 import './docsearch.js'
 import './hljs.js'
+import './menutoggle.js'
 import './scrolldir.js'
 import './smoothscroll.js'
-import './menutoggle.js'
+
 import './nojs.js'
 
 
