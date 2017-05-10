@@ -6,7 +6,7 @@
       </a>
     {{ end }}
   {{end}}
-  <h1 class="f1 lh-title mb3 mv0 pt3 primary-color-dark">
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">
     {{- if eq .Section "functions" -}}
       {{ .LinkTitle }}
     {{- else -}}
@@ -17,7 +17,7 @@
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   {{ with .Params.description }}
-    <div class="f3 fw4 lh-title">
+    <div class="f4 fw4 lh-copy">
       {{ . | markdownify }}
     </div>
   {{ end }}

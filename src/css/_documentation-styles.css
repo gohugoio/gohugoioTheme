@@ -43,7 +43,6 @@
 /*documentation-copy headings exagerate spacing and size to chunk content */
   .documentation-copy h2 {
     margin-top: 3em;
-    font-size: 1.875em;
     border-bottom: 3px solid #ccc;
     &.minor {
       font-size: inherit;
@@ -52,7 +51,4 @@
     }
   }
 
-  .documentation-copy h3 {
-    margin-top: 2em;
-    font-size: 1.5em;
-  }
+  
