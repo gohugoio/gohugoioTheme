@@ -1,87 +1,11 @@
-/* modified from:
-@import 'highlight.js/styles/vs.css';*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: var(--light-gray);
-  color: #333;
-}
-
-
-.hljs-comment,
-.hljs-quote,
-.hljs-variable {
-  color: #888;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-built_in,
-.hljs-name,
-.hljs-tag {
-  color: #333;
-}
-
-.hljs-string,
-.hljs-title,
-.hljs-section,
-.hljs-attribute,
-.hljs-literal,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-type,
-.hljs-addition {
-  color: #333;
-}
+/* modified from:*/
+@import 'highlight.js/styles/atom-one-light.css';
 
 /* hljs-template-variable covers the handlebars templating*/
 .hljs-template-variable {
   color: var(--primary-color);
 }
 
-.hljs-deletion,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-meta {
-  color: #333;
-}
-
-.hljs-doctag {
-  color: #808080;
-}
-
 .hljs-attr {
   color: var(--accent-color-light);
-}
-
-.hljs-deletion,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-meta {
-  color: #333;
-}
-
-.hljs-doctag {
-  color: #808080;
-}
-
-.hljs-attr {
-  color: #333;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link {
-  color: #333;
-}
-
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
 }
