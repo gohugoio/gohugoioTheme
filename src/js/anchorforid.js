@@ -27,7 +27,7 @@ document.onreadystatechange = function () {
     if (!contentBlock) {
       return;
     }
-    for (var level = 1; level <= 6; level++) {
+    for (var level = 2; level <= 2; level++) {
       linkifyAnchors(level, contentBlock);
     }
   }
