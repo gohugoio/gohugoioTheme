@@ -5,7 +5,7 @@ import './docsearch.js'
 import './hljs.js'
 import './scrolldir.js'
 import './smoothscroll.js'
-
+import './menutoggle.js'
 import './nojs.js'
 
 
