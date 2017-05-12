@@ -2635,6 +2635,10 @@ lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
 
+lazysizes@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-3.0.0.tgz#b1bacb5a0f28113ffa7b389ce2f35f1cff19d9b9"
+
 lcid@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"

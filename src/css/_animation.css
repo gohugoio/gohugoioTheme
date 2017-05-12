@@ -16,3 +16,6 @@
 .fadeIn {
   animation-name: fadeIn;
 }
+.animated-delay-1 {
+  animation-delay: 0.5s;
+}
