@@ -23,7 +23,7 @@
       {{ end }}
 
      <link href='{{ "dist/main.css" | absURL }}' rel='stylesheet' type="text/css" />
-
+      {{- partial "head-additions.html" . -}}
       {{- template "_internal/opengraph.html" . -}}
       {{- template "_internal/google_news.html" . -}}
       {{- template "_internal/schema.html" . -}}
@@ -32,6 +32,8 @@
       {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
         {{ template "_internal/google_analytics_async.html" . }}
       {{ end }}
+
+
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light{{ if .Site.Params.sidebar_direction }} {{ .Site.Params.sidebar_direction }}{{ end}}">
