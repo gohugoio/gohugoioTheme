@@ -10,7 +10,7 @@ function toggleClass() {
   // Find any menu items that are open
   var mobileCurrentlyOpen = document.querySelector('.mobilemenu:not(.dn)')
   var desktopCurrentlyOpen = document.querySelector('.desktopmenu:not(.dn)')
-  //var desktopActive = document.querySelector('.desktopmenu .dn')
+  var desktopActive = document.querySelector('.desktopmenu:not(.dn)')
 
   // Loop through the targets' divs
   for (var i = 0; i < content.length; i++) {
@@ -25,7 +25,7 @@ function toggleClass() {
         // close the currently open menu items
       if (mobileCurrentlyOpen) mobileCurrentlyOpen.classList.add('dn')
       if (desktopCurrentlyOpen) desktopCurrentlyOpen.classList.add('dn')
-      //if (desktopActive) desktopActive.classList.remove('db')
+      if (desktopActive) desktopActive.classList.remove('db')
 
     }
   }
