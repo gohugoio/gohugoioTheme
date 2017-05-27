@@ -1,23 +1,24 @@
-{{if .NextInSection}}
-  <a href="{{.NextInSection.Permalink }}" class="db-l f4 f3-ns link primary-color hover-black fw8">
-    {{ .NextInSection.Title }} <span class="v-mid dib">{{ partial "svg/ic_chevron_left_black_24px.svg" (dict "size" "30px") }}</span>
+{{if .Prev }}
+  <a href="{{ .Prev.Permalink }}" class="db-l f4 f3-ns link primary-color hover-black fw8">
+    <span class="v-mid dib">{{ partial "svg/ic_chevron_left_black_24px.svg" (dict "size" "30px") }}</span> {{ .Prev.Title }}
   </a>
 {{end}}
 
-{{if .PrevInSection}}
-  <a href="{{ .PrevInSection.Permalink }}" class="db-l f4 f3-ns link primary-color hover-black fw8">
-    <span class="v-mid dib">{{ partial "svg/ic_chevron_right_black_24px.svg" (dict "size" "30px") }}</span> {{ .PrevInSection.Title }}
+{{if .Next }}
+  <a href="{{.Next.Permalink }}" class="db-l f4 f3-ns link primary-color hover-black fw8">
+    {{ .Next.Title }} <span class="v-mid dib">{{ partial "svg/ic_chevron_right_black_24px.svg" (dict "size" "30px") }}</span>
   </a>
 {{end}}
+
 
 <script>
   document.body.onkeyup = function(e){
 
-    {{ if .PrevInSection }}
-      if (e.keyCode == '39') { window.location = '{{ .PrevInSection.Permalink }}'; }
+    {{ if .Prev }}
+      if (e.keyCode == '37') { window.location = '{{ .Prev.Permalink }}'; }
     {{ end }}
-    {{ if .NextInSection }}
-      if (e.keyCode == '37') { window.location = '{{.NextInSection.Permalink }}'; }
+    {{ if .Next }}
+      if (e.keyCode == '39') { window.location = '{{.Next.Permalink }}'; }
     {{ end }}
   };
 
