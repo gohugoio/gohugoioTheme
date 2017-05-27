@@ -21,7 +21,7 @@
       {{ else }}
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       {{ end }}
-
+      <style>{{- print (partial "critical.css" .) | safeCSS -}}</style>
      <link href='{{ "dist/main.css" | absURL }}' rel='stylesheet' type="text/css" />
       {{- partial "head-additions.html" . -}}
       {{- template "_internal/opengraph.html" . -}}
@@ -32,6 +32,7 @@
       {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
         {{ template "_internal/google_analytics_async.html" . }}
       {{ end }}
+
 
 
 

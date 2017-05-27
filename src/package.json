@@ -9,6 +9,7 @@
   "scripts": {
     "build:production": "rm -rf ../static/dist && webpack -p",
     "build": "webpack --progress --colors --watch",
+    "critical": "critical './../../../public/index.html' --base './../../../public' > '../layouts/partials/critical.css' --width 1300 --height 900 --minify 'true' ",
     "start": "npm run build"
   },
   "devDependencies": {
