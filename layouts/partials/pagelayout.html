@@ -9,7 +9,7 @@
     <div class="w-100 w-80-l ph0 ph4-l">
       <article class="w-100 nested-copy-line-height nested-links nested-img">
         <h1 class="primary-color-dark f2">
-          {{ with $.context.Data.Singular }}{{ . | humanize }}:{{ end }} {{ .context.Title }}
+          {{ with $.context.Data.Singular }}{{ . | humanize }}: {{ end }}{{ .context.Title }}
         </h1>
         <div class="{{ .Site.Params.copyClass }} mid-gray f5 f4-l">
           {{ .context.Content }}
