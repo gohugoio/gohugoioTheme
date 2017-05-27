@@ -32,6 +32,11 @@
         <!--
         NOTE: Removed to test builds without it.
         partial "components/author-github-data" (dict "context" . "size" "110") -->
+
+        <div class="nested-links mt4">
+          {{- partial "previous-next-links-in-section.html" . -}}
+        </div>
+
       </aside>
 
       <div class="fn f4 pl5-l pt3 mid-gray w-100 w-two-third-l serif nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote measure-wide-l"><!-- TODO: Can the content top and the description top line up more precisely, or is just winging it with padding the best we've got? -->
@@ -69,9 +74,5 @@
       </div>
 
   </article>
-
-  <div class="cf mb6 mb0-ns pa2 pa4-ns bg-light-gray flex-ns justify-center">
-    {{- partial "previous-next-links" . -}}
-  </div>
 
 {{ end }}
