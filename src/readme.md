@@ -41,3 +41,9 @@ For production, instead of `npm start`, run `npm run build:production,` which wi
 
 ---
 To run the NPM "critical" from package.json, you first must run `hugo` from the root of the project to generate a `public` folder.
+
+Make critical better:
+
+- [ ] run for a wider variety of pages. It currently runs off the new Hugo home page, but should run for docs/themes. There's much shared between them though.
+
+- [ ] Minify the CSS. The critical script seems only to minify when running inline, which we don't want to do (because it would change the build process)
