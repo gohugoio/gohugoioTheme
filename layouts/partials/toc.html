@@ -4,7 +4,7 @@
 		<p class="b">What's on this Page</p>
   	{{ .TableOfContents }}
 	{{ end }}
-	{{- partial "previous-next-icon.html" . -}}
+	{{- partial "previous-next-links-in-section.html" . -}}
 
 	{{- if .Params.godocref -}}
 	<a target="_blank" class="tooltip right godoc-link" data-tooltip="See the related Godocs for {{.Title }}" href="{{.Params.godocref}}" >
