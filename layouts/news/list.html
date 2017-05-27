@@ -14,26 +14,26 @@
   <!-- TODO: May be a good idea in this case to add monthly archives -->
 
   <div class="flex flex-wrap">
+      {{/* [wip] add archive lists
       <div class="w-100 w-20-ns dn">
         <ul>
           <li>
             <a href="#">
-              archveyo section
+              archive section
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}}
 
-    {{ $globalVariables := .Site.Data.globals }}
-    {{ $section_classes := $globalVariables.section_flex_wrap }}
-    {{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
-    <section class="{{ $section_classes }} w-100 w-80-nsTK v-top">
+    {{ $interior_classes := $.Site.Params.flex_box_interior_classes }}
+    <section class="flex-ns flex-wrap justify-between w-100 w-80-nsTK v-top">
       {{ range .Paginator.Pages }}
         {{ partial "boxes-section-summaries" (dict "context" . "classes" $interior_classes "fullcontent" false) }}
       {{ end }}
     </section>
   </div>
-  <div class="nested-list-reset nested-links"><!-- pagination.html: https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L117 -->
+  <div class="nested-list-reset nested-links">
+    {{/* pagination.html: https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L117 */}}
     {{ template "_internal/pagination.html" . }}
   </div>
 

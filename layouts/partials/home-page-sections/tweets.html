@@ -1,13 +1,11 @@
 {{ $globalVariables := .Site.Data.globals }}
 <div class="flex-ns flex-wrap center mw9">
 
-  {{ $globalVariables := .Site.Data.globals }}
-  {{ $section_classes := $globalVariables.section_flex_wrap }}
-  {{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
+  {{ $interior_classes := $.Site.Params.flex_box_interior_classes }}
 
   <h3 class="f2 fw4 white">See what others are saying about Hugo…</h3>
 
-  <div class="{{ $section_classes }}">
+  <div class="flex-ns flex-wrap justify-between">
 
     {{ range first 4 (sort $.Site.Data.homepagetweets.tweet "date" "desc" )  }}
       <div class="homepage-tweet relative {{ $interior_classes }} br1 mid-gray  pv3 nested-links shadow-5">
