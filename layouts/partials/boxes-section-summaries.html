@@ -1,6 +1,6 @@
 <div class="relative {{ .classes }} weight-{{ .context.Weight }}">
 
-  <div class="{{ .context.Site.Data.globals.box_style_classes }}">
+  <div class="bg-white mb2 pa3 pa4-l gray">
     {{ if eq .context.Section "news" }}
       <date class="f6 db" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{ .context.Date.Format "January 2, 2006" }}
