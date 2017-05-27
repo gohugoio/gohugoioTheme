@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Content-Security-Policy: default-src 'self' *.gohugo.io https://www.google-analytics.com
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
