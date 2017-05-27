@@ -1,21 +1,6 @@
+{{/* {{ define "header" }}{{ partial "page-header" . }}{{ end }} */}}
 {{ define "main" }}
-  <article class="cf pa3 pa4-m pa4-l">
-    <h1>{{ .Title }}</h1>
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “{{ .Title }}”</p>
-    </div>
-  </article>
-  <div class="mw8 center">
-    {{ $section := .Data.Pages }}
-    <div class="flex flex-wrap">
-      {{ $globalVariables := .Site.Data.globals }}
-      {{ $section_classes := $globalVariables.section_flex_wrap }}
-      {{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
-      <section class="{{ $section_classes }} w-100">
-        {{ range  $section }}
-          {{ partial "boxes-section-summaries" (dict "context" . "classes" $interior_classes "fullcontent" false) }}
-        {{ end }}
-      </section>
-    </div>
-  </div>
+  {{ $section_to_display :=  .Data.Pages }}
+  {{ $.Scratch.Add "section_to_display" $section_to_display }}
+  {{ partial "pagelayout.html" . }}
 {{ end }}
