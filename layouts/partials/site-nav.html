@@ -1,6 +1,7 @@
 {{ $currentPage := . }}
-<nav class="z-999 bg-primary-color-dark ph4 border-box pv4 w-100 flex justify-start items-center" role="navigation">
-  <h1 class="mv0 lh-solid f3 ml0-ns mr0 mr4-l">
+<nav class="bg-primary-color-dark pv4 w-100" role="navigation">
+  <div class="center flex flex-wrap items-start justify-start mw9">
+  <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
     <a href="{{ .Site.BaseURL }}" class="link white">
        HUGO
     </a>
@@ -9,7 +10,7 @@
     {{ range .Site.Menus.global }}
       <li class="f5 dib mr4" role="menuitem">
           {{/* TODO: Create an "Global" active class to show which site one is currently at */}}
-        <a href="{{ .URL }}" class="link dim{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
+        <a href="{{ .URL }}" class="dim link{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
           {{ .Name }}
             {{/* using ".Post" from the menu system to determine if we should show an icon for external links */}}
           {{ $post_status := printf "%s" .Post }}
@@ -20,10 +21,14 @@
       </li>
     {{ end }}
   </ul>
-<div class="flex-auto"> </div>
+
+  <div class="flex-auto-ns self-nd pl3 pr6-ns">
     {{- partial "site-search.html" . -}}
-  <div class="flex-auto"> </div>
-  <span class="absolute flex-m flex-column static-l top-0 right-0">
+  </div>
+
+  <span class="absolute pr3 mt3 mt4-l right-0 static-lTK top-0">
     {{- partial "social-follow.html" . -}}
   </span>
+
+  </div>
 </nav>
