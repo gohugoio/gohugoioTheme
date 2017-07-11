@@ -12,6 +12,9 @@
           </div>
           <p class="f6 gray tc w-70 center">The Hugo logos are copyright © Steve Francia 2013–{{ now.Year }}.</p>
           <p class="f6 gray tc w-70 center">The Hugo Gopher is based on an original work by Renée French.</p>
+          {{ with  getenv "REPOSITORY_URL" -}}
+          <p class="f6 tc w-70 center"><a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg"/></a></p>
+          {{- end }}
       </div>
 
       <div class="w-third pv3 dn db-l">
