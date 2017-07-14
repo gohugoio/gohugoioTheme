@@ -1,5 +1,5 @@
 {{ $currentPageUrl := .URL }}
-{{ if .Params.tags }}
+{{ if and .Params.tags .Site.Taxonomies.tags }}
   {{ $name := index .Params.tags 0 }}
   {{ $name := $name | urlize }}
   {{ $tags := index .Site.Taxonomies.tags $name }}
