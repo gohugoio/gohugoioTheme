@@ -10,7 +10,7 @@
         <span class="f6 gray pb1 db">
           {{ .Date.Format "January 2, 2006" }}
         </span>
-        {{ .Params.description | safeHTML | truncate 100 "…"}}
+        {{ .Params.description | markdownify | truncate 100 "…"}}
       </a>
     {{ end }}
 

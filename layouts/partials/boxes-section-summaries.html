@@ -19,7 +19,7 @@
 
     <div class="lh-copy links">
       {{ if .context.Params.description  }}
-          {{ .context.Params.description  }}
+          {{ .context.Params.description | markdownify }}
         {{ else }}
           {{ .context.Summary  }}
       {{ end }}
