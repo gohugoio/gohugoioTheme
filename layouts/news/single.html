@@ -29,6 +29,11 @@
         <time class="f6 mt2 db ttu tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
+        {{ if in .Params.categories "Releases" }}
+        <p>
+        Go to <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a> for the release downloads.
+        </p>
+        {{ end }}
         <!--
         NOTE: Removed to test builds without it.
         partial "components/author-github-data" (dict "context" . "size" "110") -->
