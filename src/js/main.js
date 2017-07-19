@@ -7,8 +7,6 @@ import './hljs.js'
 import './lazysizes.js'
 import './menutoggle.js'
 import './scrolldir.js'
-import './smoothscroll.js'
-
 import './nojs.js'
 
 
