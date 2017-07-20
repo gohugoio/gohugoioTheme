@@ -32,6 +32,13 @@ pre {
   border-color: #ccc;
   border-style: solid;
 }
+
+/* The Pygments highlighter comes with its own styles. */
+.highlight pre {
+  background-color: inherit;
+  color: inherit;
+}
+
 /*We are adding the copy button content here so we can change it with javascript. See the "Clipboard scripts"*/
 .copy:after {
   content: "Copy"
