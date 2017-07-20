@@ -1,5 +1,5 @@
 /* From http://cssfontstack.com */
-code, .code, pre code  {
+code, .code, pre code, .highlight pre  {
   font-family: 'inconsolata',Menlo,Monaco,'Courier New',monospace;
 }
 
