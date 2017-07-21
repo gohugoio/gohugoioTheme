@@ -25,6 +25,7 @@
     /*margin-left: 1em;*/
     margin-top: 2em;
     margin-bottom: 2em;
+    overflow-x: auto;
     /*font-size: .9375em;*/
     background-color: var(--black-05);
   }
