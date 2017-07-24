@@ -22,7 +22,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       {{ end }}
 
-     <link href='{{ "dist/main.css" | absURL }}' rel='stylesheet' type="text/css" />
+     <link href='{{ "dist/main.css" | relURL }}' rel='stylesheet' type="text/css" />
       {{- partial "head-additions.html" . -}}
       {{- template "_internal/opengraph.html" . -}}
       {{- template "_internal/google_news.html" . -}}
