@@ -19,15 +19,15 @@
 
       <div class="w-third pv3 dn db-l">
         <ul class="list ma0 pa0 w-50 center">
-          <li><a href="{{ .Site.Params.github_repo }}" class="link white dim pv2 db">File an Issue</a></li>
-          <li><a href="{{ .Site.Params.forum }}" class="link white dim pv2 db">Get Help</a></li>
-          <li><a href="{{ .Site.Params.gitter }}" class="link white dim pv2 db">Discuss the Source Code</a></li>
+          {{- with .Site.Params.github_repo -}}<li><a href="{{ . }}" class="link white dim pv2 db">File an Issue</a></li>{{- end -}}
+          {{- with .Site.Params.forum -}}<li><a href="{{ . }}" class="link white dim pv2 db">Get Help</a></li>{{- end -}}
+          {{- with .Site.Params.gitter -}}<li><a href="{{ . }}" class="link white dim pv2 db">Discuss the Source Code</a></li>{{- end -}}
         </ul>
       </div>
 
       <div class="w-third pv3 dn db-l">
         <ul class="list ma0 pa0">
-            <li><a href="https://twitter.com/gohugoio" class="link white dim pv2 db">@GoHugoIO</a></li>
+          <li><a href="https://twitter.com/gohugoio" class="link white dim pv2 db">@GoHugoIO</a></li>
           <li><a href="https://twitter.com/spf13" class="link white dim pv2 db">@spf13</a></li>
           <li><a href="https://twitter.com/bepsays" class="link white dim pv2 db">@bepsays</a></li>
         </ul>
