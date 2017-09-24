@@ -1,6 +1,6 @@
 /* Background */ .chroma { background-color: #f0f0f0 }
 /* Error */ .chroma .ss4 {  }
-/* LineHighlight */ .chroma .hl { ; display: block; width: 100% }
+/* LineHighlight */ .chroma .hl { color: #ffffcc; display: block; width: 100% }
 /* LineNumbers */ .chroma .ln { ; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
 /* Keyword */ .chroma .s3e8 { color: #007020; font-weight: bold }
 /* KeywordPseudo */ .chroma .s3ec { color: #007020 }
