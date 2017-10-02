@@ -35,7 +35,11 @@
   /*margin: 0;*/
 }
 
-
 .mw-90 {
   max-width:90%;
+}
+
+.github-stars img {
+    width: inherit;
+    display: inline;
 }
