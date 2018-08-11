@@ -13,13 +13,13 @@
 
 <script>
   document.body.onkeyup = function(e){
-
-    {{ if .Prev }}
+    if (!(e.ctrlKey || e.shiftKey || e.altKey || e.metaKey)) {
+    {{- if .Prev }}
       if (e.keyCode == '37') { window.location = '{{ .Prev.Permalink }}'; }
-    {{ end }}
-    {{ if .Next }}
-      if (e.keyCode == '39') { window.location = '{{.Next.Permalink }}'; }
-    {{ end }}
+    {{- end }}
+    {{- if .Next }}
+      if (e.keyCode == '39') { window.location = '{{ .Next.Permalink }}'; }
+    {{- end }}
+    }
   };
-
 </script>
