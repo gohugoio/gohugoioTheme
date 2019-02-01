@@ -2,8 +2,16 @@
   "name": "gohugo-default-styles",
   "version": "1.0.0",
   "description": "Default Theme for Hugo Sites",
+  "private": true,
   "main": "index.js",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gohugoio/gohugoioTheme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gohugoio/gohugoioTheme/issues"
+  },
+  "homepage": "https://github.com/gohugoio/gohugoioTheme#readme",
   "author": "budparr",
   "license": "MIT",
   "scripts": {
