@@ -31,5 +31,7 @@
     "tachyons": "^4.7.0",
     "webpack": "^2.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "body-scroll-lock": "^2.5.7"
+  }
 }
