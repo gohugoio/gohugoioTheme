@@ -1,0 +1,17 @@
+
+[module]
+    [module.hugoVersion]
+    min = "0.56.0"
+
+    [[module.mounts]]
+    source = "static"
+    target = "static"
+
+    [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+
+    [[module.mounts]]
+    source = "data"
+    target = "data"
+
