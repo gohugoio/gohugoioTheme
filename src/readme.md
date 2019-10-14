@@ -42,6 +42,7 @@ For production, instead of `npm start`, run `npm run build:production,` which wi
 1. Install js-beautify (npm install -g js-beautify)
 2. Add below to your ~/.gitconfig
 
+```
 [diff "minjs"]
 	textconv = js-beautify
 	cachetextconv = true
