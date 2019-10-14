@@ -5,6 +5,18 @@ Theme for gohugo.io sites:
 * [https://themes.gohugo.io/](https://themes.gohugo.io/)
 
 
+## Update the sites
+
+This theme is currently in use in two Hugo sites:
+
+* https://github.com/gohugoio/hugoDocs
+* https://github.com/gohugoio/hugoThemesSite
+
+To update those to use a new version of the theme, run this from each the above repos and commit the changes:
+
+```
+hugo mod get -u github.com/gohugoio/gohugoioTheme
+```
 
 ## Tools
 
