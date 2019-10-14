@@ -41,3 +41,16 @@ This will process both postcss, fonts, and scripts.
 For production, instead of `npm start`, run `npm run build,` which will output smaller versions of your files.
 
 
+## Get prettier diffs on minified CSS/JS
+
+1. Install js-beautify (npm install -g js-beautify)
+2. Add below to your ~/.gitconfig
+
+```
+[diff "minjs"]
+	textconv = js-beautify
+	cachetextconv = true
+[diff "mincss"]
+	textconv = js-beautify --css
+	cachetextconv = true
+```
