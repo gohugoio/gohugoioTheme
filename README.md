@@ -18,6 +18,12 @@ To update those to use a new version of the theme, run this from each the above 
 hugo mod get -u github.com/gohugoio/gohugoioTheme
 ```
 
+Note that in the `hugoDocs` repo, the theme is vendored, so after the above command you need to run this:
+
+```
+hugo mod vendor
+```
+
 ## Tools
 
 ### NPM
