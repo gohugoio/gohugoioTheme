@@ -15,18 +15,26 @@
      {{ hugo.Generator }}
 
       {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+        <meta name="robots" content="index, follow">
       {{ else }}
-        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <meta name="robots" content="noindex, nofollow">
       {{ end }}
 
     {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
     
-    {{ $stylesheet := resources.Get "output/css/app.css" | minify | fingerprint }}
+    {{ $isDev := eq hugo.Environment "development" }}
+    {{ $stylesheet := resources.Get "output/css/app.css"  }}
+    {{ if not $isDev }}
+    {{ $stylesheet = $stylesheet | minify | fingerprint }}
+    {{ end }}
     {{ with $stylesheet }}
-      <link rel="stylesheet" href="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"> 
+      {{ if $isDev }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}"  crossorigin="anonymous">
+      {{ else }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
       {{ $.Scratch.Set "stylesheet" . }}    
     {{end}}
 

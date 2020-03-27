@@ -5,6 +5,24 @@ Theme for gohugo.io sites:
 * [https://themes.gohugo.io/](https://themes.gohugo.io/)
 
 
+## Update the sites
+
+This theme is currently in use in two Hugo sites:
+
+* https://github.com/gohugoio/hugoDocs
+* https://github.com/gohugoio/hugoThemesSite
+
+To update those to use a new version of the theme, run this from each the above repos and commit the changes:
+
+```
+hugo mod get -u github.com/gohugoio/gohugoioTheme
+```
+
+Note that in the `hugoDocs` repo, the theme is vendored, so after the above command you need to run this:
+
+```
+hugo mod vendor
+```
 
 ## Tools
 
@@ -41,3 +59,16 @@ This will process both postcss, fonts, and scripts.
 For production, instead of `npm start`, run `npm run build,` which will output smaller versions of your files.
 
 
+## Get prettier diffs on minified CSS/JS
+
+1. Install js-beautify (npm install -g js-beautify)
+2. Add below to your ~/.gitconfig
+
+```
+[diff "minjs"]
+	textconv = js-beautify
+	cachetextconv = true
+[diff "mincss"]
+	textconv = js-beautify --css
+	cachetextconv = true
+```
