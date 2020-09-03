@@ -19,7 +19,7 @@
     "file-loader": "^2.0.0",
     "glob-all": "^3.1.0",
     "highlight.js": "^9.13.1",
-    "lazysizes": "^4.1.4",
+    "lazysizes": "^5.2.1",
     "mini-css-extract-plugin": "^0.4.4",
     "postcss": "^7.0.5",
     "postcss-cssnext": "^3.1.0",
