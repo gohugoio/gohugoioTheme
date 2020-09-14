@@ -21,7 +21,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.0",
     "clipboard": "^2.0.4",
-    "css-loader": "^1.0.1",
+    "css-loader": "^4.3.0",
     "docsearch.js": "^2.6.1",
     "file-loader": "^2.0.0",
     "glob-all": "^3.1.0",
