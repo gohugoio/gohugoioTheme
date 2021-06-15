@@ -37,7 +37,7 @@
     "tachyons": "^4.7.0",
     "typeface-muli": "0.0.54",
     "webpack": "^4.44.1",
-    "webpack-command": "^0.4.2"
+    "webpack-command": "^0.5.1"
   },
   "dependencies": {}
 }
