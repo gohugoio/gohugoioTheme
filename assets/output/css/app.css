@@ -5130,13 +5130,13 @@ code, .code, pre code, .highlight pre  {
   
   [data-scrolldir="down"] .sticky {
     position: fixed;
-    top:100px;
+    top:110px;
     right:0;
   }
 
   [data-scrolldir="up"] .sticky {
     position: fixed;
-    top:100px;
+    top:110px;
     right:0;
   }
 }
