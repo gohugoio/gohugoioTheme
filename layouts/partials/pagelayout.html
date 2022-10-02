@@ -27,6 +27,10 @@
         </section>
       </div>
 
+      <div class="nested-list-reset nested-links">
+        {{/* pagination.html: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/template_embedded.go#L117 */}}
+        {{ template "_internal/pagination.html" .pagination_data }}
+      </div>
     </div>
 
   </div>
