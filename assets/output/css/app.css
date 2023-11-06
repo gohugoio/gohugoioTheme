@@ -5305,6 +5305,13 @@ code, .code, pre code, .highlight pre  {
 .chroma .gt { color: #aa0000 }
 /* TextWhitespace */
 .chroma .w { color: #bbbbbb }
+@media print {
+  #page-footer,
+  body > footer,
+  body > nav {
+    display: none;
+  }
+}
 .nested-blockquote blockquote {
   border-left: 4px solid #0594CB;
   padding-left: 1em;
