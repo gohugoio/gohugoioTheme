@@ -24,7 +24,9 @@ Renders the child sections of the given top-level section, listing each child's 
     {{ range .Pages }}
       {{ $aliases := "" }}
       {{ if eq .Section "functions" }}
-        {{ $aliases = delimit .Params.action.aliases " or " }}
+        {{ with .Params.action.aliases }}
+          {{ $aliases = delimit . " or " }}
+        {{ end }}
       {{ end }}
 
 [{{ .LinkTitle }}]({{ .RelPermalink }}) {{ with $aliases }}({{ . }}){{ end }}
